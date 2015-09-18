@@ -1,18 +1,42 @@
 {
   "name": "records",
   "version": "1.0.0",
-  "description": "records: An Ionic project",
+  "description": "records",
   "dependencies": {
-    "gulp": "^3.5.6",
-    "gulp-sass": "^1.3.3",
-    "gulp-concat": "^2.2.0",
-    "gulp-minify-css": "^0.3.0",
-    "gulp-rename": "^1.2.0"
+    "bcryptjs": "^2.1.0",
+    "body-parser": "^1.12.2",
+    "colors": "^1.0.3",
+    "cors": "^2.5.3",
+    "express": "^4.12.3",
+    "glob": "^5.0.3",
+    "helmet": "^0.7.0",
+    "jsonwebtoken": "^4.2.1",
+    "lodash": "^3.5.0",
+    "method-override": "^2.3.2",
+    "mm-node-logger": "^0.0.*",
+    "mongoose": "^4.0.0",
+    "morgan": "^1.5.2",
+    "multer": "^0.1.8",
+    "passport": "^0.2.1",
+    "passport-local": "^1.0.0",
+    "path": "^0.11.14",
+    "redis": "^0.12.1"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index -w 'src/**/*' --ext 'js json'",
+    "debug": "nodemon index --debug -w 'src/**/*' --ext 'js json'",
+    "lint": "jshint src/**/*.js",
+    "postmerge": "npm install",
+    "pretest": "npm run lint"
   },
   "devDependencies": {
     "bower": "^1.3.3",
+    "gulp-jade": "^1.1.0",
     "gulp-util": "^2.2.14",
-    "shelljs": "^0.3.0"
+    "shelljs": "^0.3.0",
+    "jshint": "latest",
+    "nodemon": "^1.3.7"
   },
   "cordovaPlugins": [
     "cordova-plugin-device",
