@@ -1,0 +1,34 @@
+h3 Login
+form(method="post" ng-submit="login()" name="loginForm")
+	label Email
+		input(type="email", ng-model="email" placeholder="Enter your email" name="email" required)
+		div(ng-if="loginForm.email.$dirty" ng-messages="loginForm.email.$error")
+			div(ng-message="required") Try again, your email address is invalid
+	label Password
+		input(type="password", ng-model="password" placeholder="Password" name= "password" required)
+		.validation(ng-if="loginForm.password.$dirty" ng-messages="loginForm.password.$error")
+			.message(ng-message="required") You masterful blackhat! We do need a password though...
+
+		button(type="submit" ng-disabled="loginForm.$invalid") Login
+
+
+
+h3 Sign up
+form(method="post" ng-submit="signup()" name="signupForm")
+	label Email
+		input(type="email", ng-model="email" placeholder="enter your email" name="email" required autofocus)
+		div(ng-if="signupForm.email.$dirty" ng-messages="signupForm.email.$error")
+			div(ng-message="required") Try again, your email address is invalid
+
+	label Password
+		input(type="password", ng-model="password" placeholder="password" name= "password" required)
+		div(ng-if="signupForm.password.$dirty" ng-messages="signupForm.password.$error")
+			div(ng-message="required") You masterful blackhat! We do need a password though...
+
+	label Password
+		input(type="password", ng-model="confirmPassword" placeholder="confirmPassword" name= "confirmpassword" confirm-password="password" ng-class="{ 'success' : signupForm.confirmPassword.$valid && signupForm.confirmPassword.$dirty, 'warning' : signupForm.confirmPassword.$invalid && signupForm.confirmPassword.$dirty }" required)
+		div(ng-if="signupForm.confirmPassword.$dirty" ng-messages="signupForm.confirmPassword.$error")
+			div(ng-message="required") Common, it's for your own saftey
+			div(ng-message="repeat") Slow down, try to get them the same next time
+
+		button(type="submit" ng-disabled="signupForm.$invalid") Create account
