@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ngCordova', 'ngAnimate'])
+angular.module('records', ['ionic', 'ngCordova', 'ngAnimate'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -30,7 +30,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 
   .state('tab.auth', {
     url: '/auth',
-    templateUrl: 'templates/auth.jade',
+    templateUrl: 'templates/auth.html',
     controller: 'auth',
     controllerAs: 'auth'
   })

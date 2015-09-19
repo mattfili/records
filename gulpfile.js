@@ -6,7 +6,7 @@ var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
-var jade = require('jade');
+var jade = require('gulp-jade');
 
 var paths = {
   sass: ['./scss/**/*.scss'],
@@ -32,7 +32,7 @@ gulp.task('sass', function(done) {
 gulp.task( 'jade', function (done) {
   gulp.src( paths.jade )
     .pipe( jade() )
-    .pipe( gulp.dest( './www/' ) )
+    .pipe( gulp.dest( './www/templates' ) )
     .on( 'end', done );
 } );
 
