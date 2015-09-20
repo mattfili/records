@@ -17,13 +17,15 @@ angular.module('records', ['ionic', 'ngCordova', 'ngAnimate'])
 })
 
 .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
-  $locationProvider.html5Mode(true);
+  $urlRouterProvider.when('', '/');
+  $urlRouterProvider.otherwise('/tabs/auth');
+
   
   $stateProvider
 
   // setup an abstract state for the tabs directive
   .state('tab', {
-    url: '/tab',
+    url: '/tabs',
     abstract: true,
     templateUrl: 'templates/tabs.html'
   })
@@ -38,6 +40,8 @@ angular.module('records', ['ionic', 'ngCordova', 'ngAnimate'])
 
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab');
+
 
 });
+
+

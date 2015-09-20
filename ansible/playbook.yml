@@ -16,9 +16,9 @@
     android_sdk_download_location: http://dl.google.com/android/android-sdk_r24.1.2-linux.tgz
     android_sdk_install_location: /home/vagrant/android-sdk-linux
     android_sdk_dependency_packages:
-      - "libncurses5:i386"
-      - "libstdc++6:i386"
-      - "zlib1g:i386"
+      - "libncurses5" 
+      - "libstdc++6"
+      - "zlib1g"
       - "imagemagick"
       - "expect"
       - "ant"
@@ -28,4 +28,4 @@
       - "python-dev"
       - "zlibc"
       - "android-tools-adb"
-    android_sdks_to_install: "platform-tool,build-tools-21.1.2,build-tools-20.0.0,build-tools-19.1.0,android-21,android-20,android-19"
+    android_sdks_to_install: "platform-tool,build-tools-21.1.2,build-tools-20.0.0,build-tools-19.1.0,android-21,android-20,android-19, android-22"

@@ -16,7 +16,7 @@ var paths = {
 gulp.task('default', ['sass']);
 
 gulp.task('sass', function(done) {
-  gulp.src('./scss/ionic.app.scss')
+  gulp.src('./scss/app.scss')
     .pipe(sass({
       errLogToConsole: true
     }))
@@ -30,7 +30,7 @@ gulp.task('sass', function(done) {
 });
 
 gulp.task( 'jade', function (done) {
-  gulp.src( paths.jade )
+  gulp.src( './jade/**/*.jade' )
     .pipe( jade() )
     .pipe( gulp.dest( './www/templates' ) )
     .on( 'end', done );
